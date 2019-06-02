@@ -30,6 +30,7 @@ int main (){
 	// カレンダー
 	printf("\n\n\t%d年\n%2d月\n",year,month);
 	printf("  日 月 火 水 木 金 土\n");
+	printf("--------------------\n");
 	for(cnt = 1,week_cnt = 0;cnt <= total%7;cnt++,week_cnt++) printf("   ");
 	
 	for(cnt = 1;cnt <= month_date[month-1];cnt++,week_cnt++){
