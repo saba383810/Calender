@@ -7,7 +7,7 @@ int main (){
 
 	int year,month,cnt,week_cnt;
 	int month_date[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
-	int total = 0;
+	int total = 1;
 	printf("カレンダーを出力します。\n");
 	do{
 		printf("年(1以上)を入力してください。>>");
