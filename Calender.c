@@ -2,21 +2,27 @@
 #include<stdlib.h>
 
 int Check_Leapyear(int);
+int End(void);
 
 int main (){
 
 	int year,month,cnt,week_cnt;
 	int month_date[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 	int total = 1;
+	int oko_cnt =0;
 	printf("カレンダーを出力します。\n");
 	do{
 		printf("年(1以上)を入力してください。>>");
 		scanf("%d",&year);
+		oko_cnt++;
+		if(oko_cnt >= 3) End();
 	}while(year<1);
-
+	oko_cnt = 0;
 	do{
 		printf("月(1~12)を入力してください。>>");
 		scanf("%d",&month);
+		oko_cnt++;
+		if(oko_cnt >= 3) End();
 	}while(month>12 || month<1);
 
 	// 閏年計算
@@ -47,4 +53,8 @@ int Check_Leapyear(int year){
 		return 1;
 	else
 		return 0;
+}
+int End(){
+	printf("おこだよ！！");
+	Exit(0);
 }
