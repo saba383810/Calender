@@ -44,6 +44,7 @@ int main (){
 		
 		printf("%3d",cnt);
 	}
+	printf("\n");
 	return 0;
 }
 
