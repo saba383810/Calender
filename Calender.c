@@ -43,9 +43,8 @@ int main (){
 
 // 閏年なら”1”を返す関数
 int Check_Leapyear(int year){
-	if(year%400==0||(year%4==0 && year%100 != 0)){
+	if(year%400==0||(year%4==0 && year%100 != 0))
 		return 1;
-	}else{
+	else
 		return 0;
-	}
 }
