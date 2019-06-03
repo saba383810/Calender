@@ -55,6 +55,6 @@ int Check_Leapyear(int year){
 		return 0;
 }
 int End(){
-	printf("おこだよ！！");
+	printf("+------------+\n|おこだよ！！|\n+------------+\n( ・∇・)");
 	Exit(0);
 }
