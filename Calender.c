@@ -12,7 +12,7 @@ int main (){
 	int oko_cnt =0;
 	printf("カレンダーを出力します。\n");
 	do{
-		printf("年(1以上)を入力してください。>>");
+		printf("年(西暦)を入力してください。>>");
 		scanf("%d",&year);
 		oko_cnt++;
 		if(oko_cnt >= 3) End();
