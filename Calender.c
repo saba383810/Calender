@@ -27,17 +27,17 @@ int main (){
 
 	// 閏年計算
 	for(cnt = 1;cnt <= year-1;cnt++){
-		total = total + 365 + Check_Leapyear(cnt);
+		total = total + 365 + Check_Leapyear(cnt);//閏年を考慮した入力された年の前の年までの合計
 	}
 	if(Check_Leapyear(year)) month_date[1]++;
 	for(cnt = 0;cnt < month-1;cnt++){
-		total = total + month_date[cnt];
+		total = total + month_date[cnt];//入力された年と月の合計
 	}
 	// カレンダー
 	printf("\n\n\t%d年\n%2d月\n",year,month);
 	printf("  日 月 火 水 木 金 土\n");
 	printf("--------------------\n");
-	for(cnt = 1,week_cnt = 0;cnt <= total%7;cnt++,week_cnt++) printf("   ");
+	for(cnt = 1,week_cnt = 0;cnt <= total%7;cnt++,week_cnt++) printf("   ");//月ごとの週のズレを空白で埋める
 	
 	for(cnt = 1;cnt <= month_date[month-1];cnt++,week_cnt++){
 		if(week_cnt % 7 == 0) printf("\n");
